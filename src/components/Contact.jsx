@@ -1,34 +1,148 @@
-import React from 'react'
-import { CONTACT } from '../constants'
-import { motion } from 'framer-motion'
+import React, { useState,useRef } from "react";
+import { CONTACT } from "../constants";
+import { motion } from "framer-motion";
+import { MdSend } from "react-icons/md";
+
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  return (
-    <div className=' border-b border-neutral-900 pb-20'>
-        <motion.h1
-        whileInView={{opacity:1,y:0}}
-        initial={{opacity:0,y:-100}}
-        transition={{duration:0.5}}
-        className=' my-10 text-center text-4xl'>Get In Touch</motion.h1>
-        <div className=' text-center tracking-tighter'></div>
-        <motion.p
-        whileInView={{opacity:1,x:0}}
-        initial={{opacity:0,x:-100}}
-        transition={{duration:1}}
-         className=' my-4'>{CONTACT.address}</motion.p>
-        <motion.p
-         whileInView={{opacity:1,x:0}}
-         initial={{opacity:0,x:100}}
-         transition={{duration:1}}
-          className=' my-4' >{CONTACT.phoneNo}</motion.p>
-        
-        <motion.a
-         whileInView={{opacity:1,x:0}}
-         initial={{opacity:0,x:-100}}
-         transition={{duration:1}}
-         href="#" className=' border-b'>{CONTACT.email}</motion.a>
-    </div>
-  )
-}
+  const form=useRef()
+  // const [formData, setData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-export default Contact
+    emailjs
+      .sendForm('service_33ujv8e', 'template_vhh9isc', form.current, {
+        publicKey: 'f1gcIXciOENiw9QlU',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setData((e) => {
+      return { ...e, [name]: value };
+    });
+  };
+  // console.log(formData)
+  return (
+    <div className=" flex justify-between flex-wrap">
+      {/* left */}
+      <motion.div 
+       whileInView={{opacity:1,x:0}}
+       initial={{opacity:0 , x:-100}}
+       transition={{duration:0.5}}
+      className=" border-b border-neutral-900 pb-20">
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.5 }}
+          className=" my-10 text-center text-4xl"
+        >
+          Get In Touch
+        </motion.h1>
+        <div className=" text-center tracking-tighter"></div>
+        <motion.p
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          className=" my-4"
+        >
+          {CONTACT.address}
+        </motion.p>
+        <motion.a
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1 }}
+          href="tel:+91-7079429676"
+          className=" my-4"
+        >
+          {CONTACT.phoneNo}
+        </motion.a>
+        <br />
+        <motion.a
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          href="mailto:adarshk8271@gmail.com"
+          className=" border-b"
+        >
+          {CONTACT.email}
+        </motion.a>
+      </motion.div>
+
+      {/* right */}
+      <motion.div
+      whileInView={{opacity:1,x:0}}
+      initial={{opacity:0,x:100}}
+      transition={{duration:0.5}}
+       className=" py-10">
+        <form  onSubmit={sendEmail}>
+          <div className=" flex flex-col gap-5">
+            <div className=" flex flex-col gap-1 ">
+              <label htmlFor="" className=" text-yellow-600 font-bold">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+               
+                className="px-2 text-neutral-800 outline-none bg-neutral-200 rounded-md h-[35px]"
+              />
+            </div>
+            <div className=" flex flex-col  gap-1">
+              <label htmlFor="" className="text-yellow-600 font-bold">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+               
+                className="px-2 text-neutral-800 bg-neutral-200 outline-none rounded-md h-[35px]"
+              />
+            </div>
+            <div className=" flex flex-col  gap-1">
+              <label htmlFor="" className="text-yellow-600 font-bold">
+                message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+               
+                cols="20"
+                rows="5"
+               
+                className="p-2 text-neutral-800 bg-neutral-200 outline-none rounded-md "
+              ></textarea>
+            </div>
+            <div className=" flex justify-start">
+              <button className=" bg-yellow-800 hover:bg-yellow-900 px-5 w-[100px] py-2 rounded-full flex">
+                Send{" "}
+                <span className=" mx-3">
+                  <MdSend className=" w-5 h-5" />
+                </span>{" "}
+              </button>
+            </div>
+          </div>
+        </form>
+      </motion.div>
+    </div>
+  );
+};
+
+export default Contact;
