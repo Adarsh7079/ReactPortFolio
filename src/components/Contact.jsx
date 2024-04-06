@@ -25,9 +25,7 @@ const Contact = () => {
       })
       .then(
         () => {
-          formData.name="",
-          formData.email="",
-          formData.message=""
+          setData({name:"",email:"",message:""})
           toast.success("Message send",{
             position:"top-center"
           })
