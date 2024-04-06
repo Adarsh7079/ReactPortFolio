@@ -1,17 +1,21 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 import { MdSend } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  const form=useRef()
-  // const [formData, setData] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
+ 
+  const form = useRef();
+  const [formData, setData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -21,10 +25,19 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          formData.name="",
+          formData.email="",
+          formData.message=""
+          toast.success("Message send",{
+            position:"top-center"
+          })
+          
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log('FAILED...', error  );
+          toast.error("faild to load",{
+            position:"top-center"
+          })
         },
       );
   };
@@ -33,19 +46,21 @@ const Contact = () => {
     const name = e.target.name;
     const value = e.target.value;
 
-    setData((e) => {
-      return { ...e, [name]: value };
-    });
+    setData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
   };
-  // console.log(formData)
+
   return (
+    <div >
     <div className=" flex justify-between flex-wrap">
-      {/* left */}
-      <motion.div 
-       whileInView={{opacity:1,x:0}}
-       initial={{opacity:0 , x:-100}}
-       transition={{duration:0.5}}
-      className=" border-b border-neutral-900 pb-20">
+        {/* left */}
+        <motion.div 
+        whileInView={{opacity:1,x:0}}
+        initial={{opacity:0 , x:-100}}
+        transition={{duration:0.5}}
+        className=" border-b border-neutral-900 pb-20">
         <motion.h1
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
@@ -86,47 +101,49 @@ const Contact = () => {
 
       {/* right */}
       <motion.div
-      whileInView={{opacity:1,x:0}}
-      initial={{opacity:0,x:100}}
-      transition={{duration:0.5}}
-       className=" py-10">
-        <form  onSubmit={sendEmail}>
+        whileInView={{opacity:1,x:0}}
+        initial={{opacity:0,x:100}}
+        transition={{duration:0.5}}
+        className=" py-10">
+        <form onSubmit={sendEmail} ref={form}>
           <div className=" flex flex-col gap-5">
             <div className=" flex flex-col gap-1 ">
-              <label htmlFor="" className=" text-yellow-600 font-bold">
+              <label htmlFor="name" className=" text-yellow-600 font-bold">
                 Name
               </label>
               <input
                 type="text"
                 name="name"
                 id="name"
-               
+                value={formData.name}
+                onChange={handleChange}
                 className="px-2 text-neutral-800 outline-none bg-neutral-200 rounded-md h-[35px]"
               />
             </div>
             <div className=" flex flex-col  gap-1">
-              <label htmlFor="" className="text-yellow-600 font-bold">
+              <label htmlFor="email" className="text-yellow-600 font-bold">
                 Email
               </label>
               <input
                 type="email"
                 name="email"
                 id="email"
-               
+                value={formData.email}
+                onChange={handleChange}
                 className="px-2 text-neutral-800 bg-neutral-200 outline-none rounded-md h-[35px]"
               />
             </div>
             <div className=" flex flex-col  gap-1">
-              <label htmlFor="" className="text-yellow-600 font-bold">
-                message
+              <label htmlFor="message" className="text-yellow-600 font-bold">
+                Message
               </label>
               <textarea
                 name="message"
                 id="message"
-               
+                value={formData.message}
+                onChange={handleChange}
                 cols="20"
                 rows="5"
-               
                 className="p-2 text-neutral-800 bg-neutral-200 outline-none rounded-md "
               ></textarea>
             </div>
@@ -141,6 +158,9 @@ const Contact = () => {
           </div>
         </form>
       </motion.div>
+    </div>
+
+      <ToastContainer />
     </div>
   );
 };
