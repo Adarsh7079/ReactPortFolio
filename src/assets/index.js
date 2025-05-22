@@ -3,19 +3,39 @@ import project2 from "../assets/chat.png";
 import project3 from "../assets/movie.png";
 
 
-export const HERO_CONTENT = `I am a passionate MERN Stack developer with a knack for crafting robust and scalable web applications. 
-With hands-on experience, I have honed my skills in front-end technologies like React.js, Tailwind  as well as back-end
- technologies like Node.js, MySQL,Express and MongoDB. My goal is to leverage my expertise to create innovative solutions that
-  drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I’m a passionate and results-driven Full Stack Developer with experience building scalable, user-focused web applications. I specialize in React.js, Next.js, Tailwind CSS on the frontend, and Node.js, Express.js, Spring Boot, MySQL, and MongoDB on the backend.
 
-export const ABOUT_TEXT = `I am a dedicated and versatile MERN stack developer with a passion for creating efficient and user-friendly
+I’ve contributed to real estate platforms, admin panels, and business apps, and worked as an SDET at HashedIn by Deloitte, blending development and testing to ensure high-quality releases.
+
+I focus on writing clean, maintainable code aligned with business goals and am always eager to learn, explore new tech, and improve as a developer..`;
+
+export const ABOUT_TEXT = `I am a dedicated and versatile Software Developer with a passion for creating efficient and user-friendly
  web applications, I have worked with a variety of technologies, including React,Tailwind,
-  Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has 
+  Node.js, MySQL, PostgreSQL, and MongoDB, Next.js and Spring Boot. My journey in web development began with a deep curiosity for how things work, and it has 
   evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and 
   enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, 
   and contributing to web development.`;
 
 export const EXPERIENCES = [
+    {
+    year: "April/2025- Present",
+    role: "SDET-I",
+    company: "Hashedin by Deloitte",
+    description: `worked at HashedIn by Deloitte as an SDET (Software Development Engineer in Test), contributing to the quality assurance of enterprise applications.
+Wrote and maintained end-to-end tests while actively collaborating on development tasks using React.js, ensuring product reliability and performance.
+Played a dual role in both testing and feature development, bridging the gap between QA and frontend engineering teams.`,
+    technologies: ["Java", "React.js", "Selenium", "API Testing","Playwright","Jmeter"],
+  },
+  {
+    year: "Sep/2024-April/2025",
+    role: "FullStack Developer",
+    company: "Property Station",
+    description: `Worked as a Full Stack Developer, contributing to the development and maintenance of real estate web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) and Tailwind CSS for responsive UI design.
+Developed and integrated RESTful APIs with MongoDB databases, ensuring efficient data flow across the system.
+Collaborated closely with cross-functional teams and stakeholders to gather project requirements, define timelines, and deliver scalable, high-performance web solutions tailored for the real estate domain.`,
+    technologies: ["Javascript", "React.js", "Tailwind", "mongoDB","Express","Node.js","HTML","CSS"],
+  },
+
   {
     year: "oct/2023-jan/2024",
     role: "SDE Intern",

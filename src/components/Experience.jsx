@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { EXPERIENCES } from "../constants";
+import { EXPERIENCES } from "../assets";
 
 const Experience = () => {
   return (

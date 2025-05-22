@@ -1,5 +1,5 @@
 import React from "react";
-import { CODING } from "../constants";
+import { CODING } from "../assets";
 import { motion } from "framer-motion";
 
 

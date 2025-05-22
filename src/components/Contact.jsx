@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { CONTACT } from "../constants";
+import { CONTACT } from "../assets";
 import { motion } from "framer-motion";
 import { MdSend } from "react-icons/md";
 import { ToastContainer, toast } from 'react-toastify';

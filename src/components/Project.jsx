@@ -1,5 +1,5 @@
 import React from "react";
-import { PROJECTS } from "../constants";
+import { PROJECTS } from "../assets";
 import { motion } from "framer-motion";
 
 const Project = () => {

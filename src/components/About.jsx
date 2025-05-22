@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+
 import myImage from "../assets/adarsh.jpeg";
-import { ABOUT_TEXT } from "../constants";
+import { ABOUT_TEXT } from "../assets";
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
             whileInView={{opacity:1,x:0}}
             initial={{opacity:0 , x:-100}}
             transition={{duration:0.5}}
-            className=" rounded-2xl h-[500px]" src={myImage} alt="about" />
+            className=" rounded-2xl h-[500px] w-[350px]" src={myImage} alt="about" />
           </div>
         </div>
         <motion.div 
