@@ -5,7 +5,7 @@ import project3 from "../assets/movie.png";
 
 export const HERO_CONTENT = `I’m a passionate and results-driven Full Stack Developer with experience building scalable, user-focused web applications. I specialize in React.js, Next.js, Tailwind CSS on the frontend, and Node.js, Express.js, Spring Boot, MySQL, and MongoDB on the backend.
 
-I’ve contributed to real estate platforms, admin panels, and business apps, and worked as an SDET at HashedIn by Deloitte, blending development and testing to ensure high-quality releases.
+I’ve contributed to real estate platforms, admin panels, and business apps, and worked as an Software Engineer at HashedIn by Deloitte, blending development and testing to ensure high-quality releases.
 
 I focus on writing clean, maintainable code aligned with business goals and am always eager to learn, explore new tech, and improve as a developer..`;
 
@@ -19,9 +19,9 @@ export const ABOUT_TEXT = `I am a dedicated and versatile Software Developer wit
 export const EXPERIENCES = [
     {
     year: "April/2025- Present",
-    role: "SDET-I",
+    role: "Software Engineer",
     company: "Hashedin by Deloitte",
-    description: `worked at HashedIn by Deloitte as an SDET (Software Development Engineer in Test), contributing to the quality assurance of enterprise applications.
+    description: `worked at HashedIn by Deloitte as an Software Engineer, contributing to the development and maintenance of enterprise applications.
 Wrote and maintained end-to-end tests while actively collaborating on development tasks using React.js, ensuring product reliability and performance.
 Played a dual role in both testing and feature development, bridging the gap between QA and frontend engineering teams.`,
     technologies: ["Java", "React.js", "Selenium", "API Testing","Playwright","Jmeter"],
