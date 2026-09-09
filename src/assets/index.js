@@ -88,6 +88,7 @@ export const CONTACT = {
   address: "Siwan , Bihar , 841417",
   phoneNo: "+91-7079429676",
   email: "adarshk8271@gmail.com",
+  topmate: "https://topmate.io/adarsh_paritosh",
 };
 
 
