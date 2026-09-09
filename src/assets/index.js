@@ -3,28 +3,29 @@ import project2 from "../assets/chat.png";
 import project3 from "../assets/movie.png";
 
 
-export const HERO_CONTENT = `I’m a passionate and results-driven Full Stack Developer with experience building scalable, user-focused web applications. I specialize in React.js, Next.js, Tailwind CSS on the frontend, and Node.js, Express.js, Spring Boot, MySQL, and MongoDB on the backend.
+export const HERO_CONTENT = `I’m a passionate and results-driven Software Developer with experience building scalable, user-focused web applications. I specialize in React.js, Next.js, and Tailwind CSS, with backend experience in Node.js, Express.js, MySQL, and MongoDB.
 
-I’ve contributed to real estate platforms, admin panels, and business apps, and worked as an Software Engineer at HashedIn by Deloitte, blending development and testing to ensure high-quality releases.
+I’ve contributed to enterprise applications, admin panels, and business solutions, and worked as a Software Engineer at HashedIn by Deloitte, focusing on frontend development and AI-driven solutions.
 
-I focus on writing clean, maintainable code aligned with business goals and am always eager to learn, explore new tech, and improve as a developer..`;
+I’m committed to writing clean, maintainable code, solving complex problems, and continuously learning new technologies to deliver high-quality solutions....`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile Software Developer with a passion for creating efficient and user-friendly
- web applications, I have worked with a variety of technologies, including React,Tailwind,
-  Node.js, MySQL, PostgreSQL, and MongoDB, Next.js and Spring Boot. My journey in web development began with a deep curiosity for how things work, and it has 
-  evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and 
-  enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, 
-  and contributing to web development.`;
+export const ABOUT_TEXT = `I am a dedicated Software Developer specializing in building efficient and user-friendly web applications. I have experience with React.js, Next.js, Tailwind CSS, Node.js, MySQL, PostgreSQL, and MongoDB, along with AI development. I enjoy solving complex problems, learning new technologies, and collaborating with teams to deliver scalable, high-quality solutions.
+`;
 
 export const EXPERIENCES = [
     {
     year: "April/2025- Present",
     role: "Software Engineer",
     company: "Hashedin by Deloitte",
-    description: `worked at HashedIn by Deloitte as an Software Engineer, contributing to the development and maintenance of enterprise applications.
-Wrote and maintained end-to-end tests while actively collaborating on development tasks using React.js, ensuring product reliability and performance.
-Played a dual role in both testing and feature development, bridging the gap between QA and frontend engineering teams.`,
-    technologies: ["Java", "React.js", "Selenium", "API Testing","Playwright","Jmeter"],
+    description: `Worked at HashedIn by Deloitte as a Software Engineer, primarily focused on frontend development using React.js and Tailwind CSS, contributing to the development and enhancement of enterprise applications.
+
+Developed and maintained responsive, scalable, and user-friendly interfaces using React.js and Tailwind CSS, ensuring high performance, usability, and cross-device compatibility.
+
+Contributed to AI development initiatives, working on AI-driven features and integrating AI capabilities into applications to enhance functionality and user experience.
+
+Collaborated with cross-functional teams to understand requirements, implement new features, troubleshoot issues, and continuously improve application performance and reliability.
+`,
+    technologies: ["React.js", "JavaScript", "AI Agent", "Node.js","Express", "MongoDB", "Tailwind CSS", "HTML", "CSS"],
   },
   {
     year: "Sep/2024-April/2025",
