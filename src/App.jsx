@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,14 +7,14 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Codingprofile from "./components/Codingprofile";
 
-const App = () => {
-  return (
-    <div className=" overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
-      <div className=" fixed top-0 -z-10 h-full w-full">
-      <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-    
-      </div>
-       <div className=" container mx-auto px-8">
+const App = () => (
+  <main className="min-h-screen overflow-x-hidden bg-[#07111f] text-slate-100 selection:bg-teal-300 selection:text-slate-950">
+    <div className="pointer-events-none fixed inset-0 -z-0 overflow-hidden" aria-hidden="true">
+      <div className="orb orb-one" />
+      <div className="orb orb-two" />
+      <div className="noise" />
+    </div>
+    <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <Navbar />
         <Hero />
         <About />
@@ -24,9 +23,8 @@ const App = () => {
         <Experience/>
         <Project/>
         <Contact/>
-      </div>
     </div>
-  );
-};
+  </main>
+);
 
 export default App;

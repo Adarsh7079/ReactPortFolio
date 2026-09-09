@@ -1,50 +1,13 @@
-import React from "react";
-import { PROJECTS } from "../assets";
 import { motion } from "framer-motion";
+import { FiArrowUpRight, FiGithub, FiGlobe } from "react-icons/fi";
+import { PROJECTS } from "../assets";
 
-const Project = () => {
-  return (
-    <div className=" border-b border-neutral-900 pb-4">
-      <motion.h2
-      whileInView={{opacity:1,y:0}}
-      initial={{opacity:0, y: -100}}
-      transition={{duration:0.5}}
-      className=" my-20 text-center text-4xl">Project</motion.h2>
-      <div>
-        {PROJECTS.map((project, index) => (
-          <div key={index} className=" mb-8 flex flex-wrap lg:justify-center">
-            <motion.div
-            whileInView={{opacity:1,x:0}}
-            initial={{opacity:0 , x:-100}}
-            transition={{duration:1}} 
-             className="w-full lg:w-1/4">
-              <img
-              
-               src={project.image}
-              width={150}
-              height={150}
-              alt={project.title}
-              />
-            </motion.div>
-            <motion.div 
-             whileInView={{opacity:1,x:0}}
-             initial={{opacity:0,x:100}}
-             transition={{duration:1}}
-            className=" w-full max-w-full lg:w-3/4">
-                <h6 className=" mb-2 font-semibold">{project.title}</h6>
-                <p className=" mb-4 text-neutral-400">{project.description}</p>
-                {
-                    project.technologies.map((tech,index)=>(
-                        <span key={index}
-                        className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900">{tech}</span>
-                    ))
-                }
-            </motion.div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+const Project = () => <section id="work" className="border-t border-slate-800/80 pb-12 pt-20 sm:pb-16 sm:pt-28">
+  <div className="flex flex-wrap items-end justify-between gap-5"><div><p className="section-kicker">Selected work</p><h2 className="section-title">A few things I’ve <span>built.</span></h2></div><p className="max-w-xs text-sm leading-6 text-slate-500">Projects created with curiosity, care, and an eye for the people using them.</p></div>
+  <div className="mt-12 grid gap-6 lg:grid-cols-3">{PROJECTS.map((project,index) => <motion.article initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:index*.1}} key={project.title} className="project-card glass group overflow-hidden rounded-2xl">
+    <div className="overflow-hidden bg-slate-900">{project.image ? <img className="project-image aspect-[16/10] w-full object-cover" src={project.image} alt={project.title} /> : <div className="project-image relative flex aspect-[16/10] items-end overflow-hidden bg-gradient-to-br from-teal-400/30 via-slate-800 to-orange-400/20 p-6"><span className="absolute -right-4 -top-9 text-8xl font-extrabold tracking-tighter text-white/10">{project.brand}</span><div><p className="font-mono text-[10px] uppercase tracking-[.2em] text-teal-200">Healthcare / Digital</p><p className="mt-2 text-lg font-bold text-slate-100">{project.brand}</p></div></div>}</div>
+    <div className="p-6"><div className="flex items-start justify-between gap-3"><h3 className="text-xl font-bold tracking-tight text-slate-100">{project.title}</h3>{project.GitHub && <a href={project.GitHub} target="_blank" rel="noreferrer" aria-label={`${project.title} source code`} className="rounded-full border border-slate-700 p-2 text-slate-300 transition hover:border-teal-300 hover:text-teal-300"><FiGithub /></a>}</div><p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-400">{project.description}</p><div className="mt-5 flex flex-wrap gap-2">{project.technologies.map(tech=><span key={tech} className="rounded-md bg-slate-800 px-2.5 py-1 font-mono text-[10px] text-teal-200">{tech}</span>)}</div><div className="mt-6 flex flex-wrap gap-4">{project.website && <a href={project.website} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-orange-300 hover:text-orange-200"><FiGlobe /> Visit website <FiArrowUpRight /></a>}{project.GitHub && <a href={project.GitHub} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-teal-300 hover:text-teal-200"><FiGithub /> Source code</a>}</div></div>
+  </motion.article>)}</div>
+</section>;
 
 export default Project;

@@ -1,15 +1,13 @@
 import project1 from "../assets/shopping.png";
-import project2 from "../assets/chat.png";
-import project3 from "../assets/movie.png";
 
 
-export const HERO_CONTENT = `I’m a passionate and results-driven Software Developer with experience building scalable, user-focused web applications. I specialize in React.js, Next.js, and Tailwind CSS, with backend experience in Node.js, Express.js, MySQL, and MongoDB.
+export const HERO_CONTENT = `I’m a full-stack developer who builds scalable, user-focused products with React, Next.js, TypeScript, Node.js, and AI integrations. At HashedIn by Deloitte, I work on enterprise experiences used by 50k+ monthly users, improving performance, reusable UI systems, and delivery quality.
 
-I’ve contributed to enterprise applications, admin panels, and business solutions, and worked as a Software Engineer at HashedIn by Deloitte, focusing on frontend development and AI-driven solutions.
+I care about clean architecture, measurable outcomes, and interfaces that feel simple to use. My work spans frontend systems, REST APIs, authentication, testing, database design, and AI-enabled workflows.`;
 
-I’m committed to writing clean, maintainable code, solving complex problems, and continuously learning new technologies to deliver high-quality solutions....`;
+export const ABOUT_TEXT = `I am a full-stack developer with experience turning product requirements into reliable, accessible web applications. My day-to-day toolkit includes React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, MongoDB, REST APIs, and JWT authentication.
 
-export const ABOUT_TEXT = `I am a dedicated Software Developer specializing in building efficient and user-friendly web applications. I have experience with React.js, Next.js, Tailwind CSS, Node.js, MySQL, PostgreSQL, and MongoDB, along with AI development. I enjoy solving complex problems, learning new technologies, and collaborating with teams to deliver scalable, high-quality solutions.
+I have helped ship products for enterprise, real estate, and healthcare audiences. I enjoy the details that make software dependable: thoughtful component design, fast page loads, clear API contracts, automated tests, secure data flows, and collaboration across design and engineering teams.
 `;
 
 export const EXPERIENCES = [
@@ -17,24 +15,24 @@ export const EXPERIENCES = [
     year: "April/2025- Present",
     role: "Software Engineer",
     company: "Hashedin by Deloitte",
-    description: `Worked at HashedIn by Deloitte as a Software Engineer, primarily focused on frontend development using React.js and Tailwind CSS, contributing to the development and enhancement of enterprise applications.
+    description: `Built responsive React and Tailwind CSS features for a product serving 50k+ monthly users, improving Largest Contentful Paint by 28% and strengthening Core Web Vitals.
 
-Developed and maintained responsive, scalable, and user-friendly interfaces using React.js and Tailwind CSS, ensuring high performance, usability, and cross-device compatibility.
+  Created a versioned component library adopted by 8 teams, reducing duplicated UI work by 60%. Used feature flags and A/B testing to reduce rollback incidents by 80% while contributing to a 9% uplift in task completion.
 
-Contributed to AI development initiatives, working on AI-driven features and integrating AI capabilities into applications to enhance functionality and user experience.
-
-Collaborated with cross-functional teams to understand requirements, implement new features, troubleshoot issues, and continuously improve application performance and reliability.
+  Improved client performance through code splitting, memoization, caching, and leaner API usage, reducing bundle size by 18% and redundant API calls by 55%. Also contributed to AI-driven product initiatives and cross-functional delivery.
 `,
-    technologies: ["React.js", "JavaScript", "AI Agent", "Node.js","Express", "MongoDB", "Tailwind CSS", "HTML", "CSS"],
+    technologies: ["React.js", "TypeScript", "Next.js", "AI Integration", "Tailwind CSS", "Testing", "Performance"],
   },
   {
     year: "Sep/2024-April/2025",
     role: "FullStack Developer",
     company: "Property Station",
-    description: `Worked as a Full Stack Developer, contributing to the development and maintenance of real estate web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) and Tailwind CSS for responsive UI design.
-Developed and integrated RESTful APIs with MongoDB databases, ensuring efficient data flow across the system.
-Collaborated closely with cross-functional teams and stakeholders to gather project requirements, define timelines, and deliver scalable, high-performance web solutions tailored for the real estate domain.`,
-    technologies: ["Javascript", "React.js", "Tailwind", "mongoDB","Express","Node.js","HTML","CSS"],
+    description: `Launched high-performance real estate landing pages with a 95% Google PageSpeed score across desktop and mobile, supporting stronger organic search performance.
+
+  Built responsive interfaces with HTML, CSS, React.js, and Tailwind CSS. Worked directly with international real estate clients to translate requirements into tailored websites that improved user engagement by 60% within the first quarter after launch.
+
+  Developed RESTful API integrations with MongoDB and collaborated with stakeholders to deliver maintainable, production-ready web solutions.`,
+    technologies: ["React.js", "JavaScript", "Tailwind CSS", "MongoDB", "Express.js", "Node.js", "REST APIs", "SEO"],
   },
 
   {
@@ -63,24 +61,26 @@ export const PROJECTS = [
     image: project1,
     GitHub:`https://github.com/Adarsh7079/Akart`,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB","Express"],
+      "A production-like MERN e-commerce application with RESTful APIs and full CRUD workflows for products, users, and orders. Added responsive React interfaces, JWT and bcrypt authentication, and authorization flows tested with 100+ users.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "JWT", "bcrypt"],
   },
   {
-    title: "Chat App",
-    image: project2,
-    GitHub:`https://github.com/Adarsh7079/chatboat2`,
+    title: "Indian Psychiatric Society",
+    website: "https://indianpsychiatricsociety.org/",
+    GitHub: "https://github.com/Adarsh7079/PPS.git",
+    brand: "IPS",
     description:
-      "An application forChatting with friends with features such as creation rooms, multiple user can join in same room ",
-    technologies: ["HTML", "CSS", "Tailwind", "Node.js","Socket.io"],
+      "Frontend contribution to the official Indian Psychiatric Society website, creating a clear, responsive experience for members and visitors with accessible content and polished responsive UI.",
+    technologies: ["React.js", "Responsive UI", "Accessibility", "Performance"],
   },
   {
-    title: "Movie recommends",
-    image: project3,
-    gitHub:`https://github.com/Adarsh7079/movieapp`,
+    title: "Patliputra Psychiatric Society",
+    website: "https://pps-snowy.vercel.app/",
+    GitHub: "https://github.com/Adarsh7079/PPS.git",
+    brand: "PPS",
     description:
-      "A  showcasing details of movie enter by user , show all the  information about movie and give some suggestion to user .",
-    technologies: ["HTML", "CSS", "React", "Tailwind"],
+      "Built a custom medical-domain frontend used by roughly 500 healthcare professionals and patients during pilot trials. The clinician- and patient-focused interface shortened appointment lookup and form submission tasks by about 25% in user tests.",
+    technologies: ["React.js", "Responsive Design", "Healthcare UX", "User Testing"],
   }
 ];
 
